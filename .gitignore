@@ -1,0 +1,6 @@
+.sst
+node_modules
+.env
+vendor
+.next
+.open-next
