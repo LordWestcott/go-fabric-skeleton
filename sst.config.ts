@@ -4,7 +4,7 @@ import { Api, Function, NextjsSite } from "sst/constructs";
 export default {
   config(_input) {
     return {
-      name: "appointme",
+      name: "{{APP_NAME}}",
       region: "eu-north-1",
     };
   },
@@ -196,7 +196,6 @@ export default {
           "POST /stripe/create-subscription": func_Stripe_CreateSubscription,
           "PATCH /stripe/cancel-subscription": func_Stripe_CancelSubscription,
       });
-
 
       //Products
       const func_Products_ListProducts = new Function(stack, "func-products-list-products", {
